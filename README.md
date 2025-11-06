@@ -82,6 +82,53 @@ Make sure to deploy the output of `npm run build`
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
+## Project Structure
+```bash
+app/
+├── app.css
+├── components
+│   ├── charts                              # 图表数据版块，添加自己的实现
+│   │   ├── ImageDisplay.tsx
+│   │   ├── NetworkGraph.tsx
+│   │   ├── PieChartView.tsx
+│   │   ├── TimeSeriesChart.tsx
+│   │   └── WordCloudSlider.tsx
+│   └── ui                                  # shadcn/ui 框架引入，禁止添加文件
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── select.tsx
+│       ├── sheet.tsx
+│       └── tabs.tsx
+├── data
+│   └── sample.json
+├── lib
+│   └── utils.ts
+├── root.tsx
+├── routes                                  # 大版块，添加自己的实现
+│   ├── analysis.tsx
+│   ├── home.tsx
+│   ├── input.tsx
+│   ├── layouts
+│   │   └── AppLayout.tsx
+│   └── loading.tsx
+├── routes.ts
+├── sections
+│   ├── GroupsSection.tsx
+│   ├── OverviewSection.tsx
+│   └── PropagationSection.tsx
+└── welcome
+    ├── logo-dark.svg
+    ├── logo-light.svg
+    └── welcome.tsx
+public                                      # 一些资源图片文件
+├── favicon.ico
+└── images
+    ├── keywords_top.png
+    ├── network_1.png
+    ├── wordcloud_1.png
+    ├── wordcloud_2.png
+    └── wordcloud_3.png
+```
 ---
 
 Built with ❤️ using React Router.
