@@ -25,12 +25,12 @@ export default function PropagationSection() {
 
   return (
     <div className="grid gap-6">
-      <Card>
+      <Card className="h-[400px]">
         <CardHeader>
           <CardTitle>传播关系网络</CardTitle>
         </CardHeader>
-        <CardContent>
-          <NetworkGraph />
+        <CardContent className="h-full flex justify-center items-center">
+          <NetworkGraph fileUrl="/graph/community_graph.gml"/>
         </CardContent>
       </Card>
 

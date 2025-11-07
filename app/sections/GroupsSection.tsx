@@ -47,7 +47,7 @@ export default function GroupsSection() {
       </div>
 
       {/* 上方两列图表 */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-3 gap-6">
         <Card className="h-[400px]">
           <CardHeader>
             <CardTitle>关键词Top柱状图（模拟）</CardTitle>
@@ -69,6 +69,15 @@ export default function GroupsSection() {
             <PieChartView />
           </CardContent>
         </Card>
+
+        <Card className="h-[400px]">
+          <CardHeader>
+            <CardTitle>群体结构图</CardTitle>
+          </CardHeader>
+          <CardContent className="h-full flex justify-center items-center">
+            <NetworkGraph fileUrl="/graph/community_graph.gml"/>
+          </CardContent>
+        </Card>
       </div>
 
       {/* 时间序列图 */}
@@ -85,16 +94,6 @@ export default function GroupsSection() {
             showLegend
             lineType="monotone"
           />
-        </CardContent>
-      </Card>
-
-      {/* 网络结构图 */}
-      <Card>
-        <CardHeader>
-          <CardTitle>群体结构图</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <NetworkGraph />
         </CardContent>
       </Card>
     </div>
