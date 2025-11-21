@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  neo4j:
+    image: neo4j:5.26
+    container_name: neo4j_social_cognitive
+    restart: unless-stopped
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/test123
+      - NEO4J_dbms_memory_pagecache_size=1G
+      - NEO4J_dbms_memory_heap_initial__size=512m
+      - NEO4J_dbms_memory_heap_max__size=1G
+    volumes:
+      - ./data/neo4j/data:/data
+      - ./data/neo4j/logs:/logs
+      - ./data/neo4j/config:/config
+      - ./data/neo4j/plugins:/plugins
+
+  postgres:
+    image: postgres:16
+    container_name: postgres_social_cognitive
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+      - POSTGRES_DB=social_cognitive_db
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data
+

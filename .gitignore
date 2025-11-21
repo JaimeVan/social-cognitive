@@ -1,3 +1,8 @@
+docker_compose/docker-compose.yml
+docker_compose/neo4j
+docker_compose/postgres
+docker_compose/init/init.sh
+
 .DS_Store
 .env
 /node_modules/
