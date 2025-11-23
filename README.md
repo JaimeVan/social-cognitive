@@ -129,6 +129,12 @@ public                                      # 一些资源图片文件
     ├── wordcloud_2.png
     └── wordcloud_3.png
 ```
+
+## 数据库部署
+```bash
+cd docker_compose
+
+```
 ---
 
 Built with ❤️ using React Router.
